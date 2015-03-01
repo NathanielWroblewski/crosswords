@@ -1,0 +1,108 @@
+.container {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.title * { display: inline-block; }
+.title h3 { padding-left: 10px; }
+.title h1 {
+  border-right: 2px solid #2D363B;
+  padding-right: 10px;
+}
+
+.game {
+  position: relative;
+}
+
+.clues {
+  vertical-align: top;
+  width: 300px;
+  display: inline-block;
+}
+
+.clues .header {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+}
+
+.game-container {
+  vertical-align: top;
+  width: 490px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.game-container .attribution {
+  font-size: 0.7em;
+  float: right;
+  padding-right: 7px;
+  margin-bottom: 5px;
+}
+
+.cell {
+  border: 1px solid #2D363B;
+  height: 15px;
+  width: 15px;
+  float: left;
+  background-color: #F2F1EF;
+  line-height: 20px;
+  padding: 5px 6px 9px 9px;
+  cursor: pointer;
+}
+
+.cell:nth-child(-n + 15) {
+  border-top: 2px solid #2D363B;
+}
+
+.cell:nth-child(n + 211) {
+  border-bottom: 2px solid #2D363B;
+}
+
+.cell:nth-child(15n + 1) {
+  border-left: 2px solid #2D363B;
+}
+
+.cell:nth-child(15n) {
+  border-right: 2px solid #2D363B;
+}
+
+.blackbox {
+  background-color: #2D363B;
+}
+
+.cell:nth-child(15n + 1) {
+  clear: both;
+}
+
+.highlight.cell {
+  background-color: rgba(217, 231, 0, 0.3);
+}
+
+.current.cell {
+  background-color: rgba(217, 231, 0, 1);
+}
+
+.num:after {
+  width: 30px;
+  float: left;
+  margin-left: -5px;
+  margin-top: -8px;
+  content: attr(data-number);
+  font-size: 0.5em;
+}
+
+.guess.num:after {
+  width: 30px;
+  float: left;
+  margin-left: -5px;
+  margin-top: -28px;
+  content: attr(data-number);
+  font-size: 0.5em;
+}
+
+dl .active {
+  opacity: 1;
+}

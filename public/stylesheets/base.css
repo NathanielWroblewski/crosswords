@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #2D363B;
+  background-color: #F2F1EF;
+  text-align: left;
+  font-family: 'Libre Baskerville' serif;
+}
+
+hr {
+  margin: 0;
+  border: 2px solid #2D363B;
+}
+
+h1 { font-size: 3em; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 5px; }
+
+dl { margin-top: 0; }
+dl * {
+  display: inline-block;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+dl dt { width: 40px; }
+dl dd { width: 260px; }
+
+dl * { opacity: 0.5; }

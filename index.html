@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>crosswords</title>
+  <!-- FONTS -->
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:700|Libre+Baskerville' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/base.css">
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/layout.css">
+</head>
+<body>
+  <div class="container">
+    <hr>
+    <span class="title">
+      <h1>Crossword</h1><h3>Edited by Nathaniel Wroblewski</h3>
+    </span>
+    <noscript>
+      This page requires javascript.
+      Please change your browser settings to allow javascript.
+    </noscript>
+    <div>
+      <div class="clues"></div>
+      <div class="game-container">
+        <span class="attribution">PUZZLE BY COMPUTER ALGORITHM</span>
+        <div class="game"></div>
+      </div>
+  </div>
+</body>
+
+<!-- APPLICATION JAVASCRIPT -->
+<script src="/public/javascripts/namespace.js"></script>
+<script src="/public/javascripts/datasets/blackboxes.js"></script>
+<script src="/public/javascripts/datasets/clues.js"></script>
+<script src="/public/javascripts/models/wordbank.js"></script>
+<script src="/public/javascripts/models/cell.js"></script>
+<script src="/public/javascripts/models/board.js"></script>
+<script src="/public/javascripts/views/board.js"></script>
+<script src="/public/javascripts/views/clues.js"></script>
+<script src="/public/javascripts/xwords.js"></script>
+</html>
