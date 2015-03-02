@@ -1,12 +1,14 @@
 !function(){
 
+  xwords.board = Math.floor(Math.random() * 4) % 4
+
   var wordbank = new xwords.models.WordBank({
-    wordbank: xwords.datasets.clues
+    wordbank: xwords.datasets.clues[xwords.board]
   })
 
   var board = new xwords.models.Board({
     model: xwords.models.Cell,
-    blackboxes: xwords.datasets.blackboxes[0],
+    blackboxes: xwords.datasets.blackboxes[xwords.board],
     wordBank: wordbank
   })
 

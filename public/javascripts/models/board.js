@@ -26,8 +26,10 @@ xwords.models.Board = function Board(config) {
       }
     }
 
-    if (this.state.startPoints.length === 0) this.calculateStartPoints()
-    this.setStartPointNumbers()
+    if (this.state.startPoints.length === 0) {
+      this.calculateStartPoints()
+      this.setStartPointNumbers()
+    }
   },
 
   this.add = function(model) {
@@ -84,6 +86,7 @@ xwords.models.Board = function Board(config) {
       }
       if (across || down) clueNumber++
     }
+
     // this.state.startPoints = this.state.startPoints.sort(function(a, b) {
     //   return b.length - a.length
     // })
@@ -127,6 +130,7 @@ xwords.models.Board = function Board(config) {
               var board = new xwords.models.Board(state)
               board.setWord(potentialWords[j], point.index, point.orientation)
               if (board.valid()) {
+                board.print()
                 if (board.finished()) {
                   window.solution = board
                   callback(board)
@@ -261,6 +265,9 @@ xwords.models.Board = function Board(config) {
       })
     }, this)
 
+    // list.across = list.across.sort(function(a,b) { return a.number - b.number })
+    // list.down = list.down.sort(function(a,b) { return a.number - b.number })
+
     return list
   },
 
@@ -357,7 +364,9 @@ xwords.models.Board = function Board(config) {
   },
 
   this.setStartPointNumbers = function() {
-    var points = this.state.startPoints
+    var points = this.state.startPoints.sort(function(a, b) {
+      return a.number - b.number
+    })
 
     for (var i = 0; i < points.length; ++i) {
       for (var j = 0; j < points[i].indices.length; ++j) {

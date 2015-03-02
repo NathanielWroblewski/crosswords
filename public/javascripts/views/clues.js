@@ -30,6 +30,7 @@ xwords.views.Clues = function Clues(config) {
 
       var start = (startingPoint >= 0 ? startingPoint : 0),
           end = (start + 5) > data.length ? data.length : start + 5
+
       for (var i = start; i < end; ++i){
         var active = i === start ? 'active' : ''
 

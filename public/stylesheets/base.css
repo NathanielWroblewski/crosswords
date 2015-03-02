@@ -26,6 +26,9 @@ dl * {
   margin: 0;
 }
 dl dt { width: 40px; }
-dl dd { width: 260px; }
+dl dd {
+  vertical-align: top;
+  width: 260px;
+}
 
 dl * { opacity: 0.5; }
